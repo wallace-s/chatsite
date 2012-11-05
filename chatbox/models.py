@@ -1,4 +1,5 @@
 from django.db import models
+from django.forms import ModelForm
 
 # Create your models here.
 class Message(models.Model):
@@ -9,3 +10,7 @@ class Message(models.Model):
 	
 	def __unicode__(self):
 		return self.title
+		
+class MessageForm(ModelForm):
+     class Meta:
+         model = Message
