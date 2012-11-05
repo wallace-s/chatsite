@@ -33,19 +33,34 @@
     </div>
 
     <div class="container">
+	
+	<div class="page-header">
+    <h1>Welcome to Chatbox ver. 1</h1>
+    </div>
+	
+	
+	
+	<div class="row">
+	<div class="span5">
 
-		<h1>Welcome to Chatbox ver. 1</h1>
+		
       
 		<form action="." method="POST">
 		{% csrf_token %}
 		{{ message.as_p }}
 		<input type="submit" value="Submit" />
 		</form>
+	</div>
+	<div span="4">
 		
 	{% for msg in messages %}
-		<p>{{ msg.title }}</p>
+		<h3>{{ msg.title }}</h3>
+		<p>{{ msg.message }}</p>
 	{% endfor %}
+	
+	</div>
 	  
+	</div>
 
     </div> <!-- /container -->
 
