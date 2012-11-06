@@ -9,6 +9,7 @@
 
     <!-- Le styles -->
     <link href="{{ STATIC_URL}}bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="{{ STATIC_URL}}styles.css" rel="stylesheet">
     <style>
       body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
@@ -51,11 +52,12 @@
 		<input type="submit" value="Submit" />
 		</form>
 	</div>
-	<div span="4">
+	<div class="span4 offset1">
 		
 	{% for msg in messages %}
 		<h3>{{ msg.title }}</h3>
 		<p>{{ msg.message }}</p>
+		<p>Posted by: {{ msg.poster_name }}
 	{% endfor %}
 	
 	</div>
